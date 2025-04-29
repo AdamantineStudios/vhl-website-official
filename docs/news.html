@@ -4,6 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VHL - News</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/vhl-website-official/assets/VHL_favi-DpVGqZN4.png" type="image/x-icon">
+
+    <!-- OpenGraph Metadata for Discord Embed -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://virtualhockeyleague.net">
+    <meta property="og:title" content="Virtual Hockey League">
+    <meta property="og:description" content="Fast-paced sci-fi hockey. Join the future of esports.">
+    <meta property="og:image" content="./public/assets/og_vhl.png">
+    
+    <!-- Twitter Card (optional if you want Twitter sharing too) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Virtual Hockey League">
+    <meta name="twitter:description" content="Fast-paced sci-fi hockey. Join the future of esports.">
+    <meta name="twitter:image" content="./public/assets/og_vhl.png">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     @keyframes glowPulse {
@@ -81,40 +96,61 @@
 <main class="pt-40 px-6 max-w-5xl mx-auto">
 
     <!-- Update Section -->
-  <section class="update-entry border-b border-gray-800 pb-12 mb-12">
-    <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 mb-4">
-      🔥 Lobby Stress Test — April 2025
-    </h2>
-    <p class="text-lg text-gray-300 mb-6">
-      We're organizing our very first full-lobby multiplayer playtest session! Join the devs, watch live, and see the chaos unfold.
-    </p>
-
-    <!-- Promo Buttons -->
-    <div class="flex flex-wrap gap-4 mb-6">
-      <a href="https://twitch.tv/yourchannel" target="_blank" class="px-5 py-2 rounded-lg font-semibold bg-gradient-to-r from-fuchsia-500 to-pink-500 hover:from-fuchsia-600 hover:to-pink-600 animate-glow">
-        🔴 Watch Live on Twitch
-      </a>
-      <a href="https://youtube.com/yourchannel" target="_blank" class="px-5 py-2 rounded-lg font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 animate-glow">
-        🎥 Missed it? Catch it on YouTube
-      </a>
-    </div>
-
-    <div class="text-gray-400 leading-relaxed space-y-4">
-      <p>
-        In this session, we'll be testing our latest build featuring improvements and new systems designed for stability, responsiveness, and full match flow.
-      </p>
-      <ul class="list-disc list-inside pl-2">
-        <li>✅ Dedicated lobby matchmaking system</li>
-        <li>✅ Synced UI/HUD across clients</li>
-        <li>✅ Skating collisions + puck control overhaul</li>
-        <li>✅ Arena lighting update & animated crowds</li>
-        <li>✅ First server-side performance metrics logging</li>
-      </ul>
-      <p>
-        We're aiming to stress-test the server and gather feedback from early testers. Everyone's welcome to join the stream or request private access. Details will follow on Discord and social channels.
-      </p>
-    </div>
-  </section>
+    <section class="update-entry border-b border-gray-800 pb-12 mb-12">
+        <h2 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400 mb-4">
+          ⚙️ Gameplay Evolution — One-Timers & Goalie Powerplay
+        </h2>
+      
+        <p class="text-lg text-gray-300 mb-6">
+          We're gearing up for the <strong>first-ever full lobby pre-alpha test</strong> on <span class="text-fuchsia-400 font-semibold">9. 5. 2025 at 21:00 CEST</span>! Join us live on stream as we push VHL's gameplay systems to their limits:
+        </p>
+      
+        <!-- Promo Buttons -->
+        <div class="flex flex-wrap gap-4 mb-6">
+          <a href="https://www.twitch.tv/vhlgame" target="_blank" class="px-5 py-2 rounded-lg font-semibold bg-gradient-to-r from-fuchsia-500 to-pink-500 hover:from-fuchsia-600 hover:to-pink-600 animate-glow">
+            🔴 Watch Live on Twitch
+          </a>
+          <a href="https://www.youtube.com/@davidpameten" target="_blank" class="px-5 py-2 rounded-lg font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 animate-glow">
+            🎥 Missed it? Catch it on YouTube
+          </a>
+        </div>
+      
+        <div class="text-gray-400 leading-relaxed space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold text-fuchsia-400 mb-2">🆕 One-Timer Rework</h3>
+            <p>We’re reimagining the one-timer to give it more depth, control, and strategic impact:</p>
+            <ul class="list-disc list-inside pl-2">
+              <li><strong><span class="text-pink-400">When you don’t have the puck:</span></strong></li>
+              <ul class="list-disc list-inside pl-6 text-sm">
+                <li>Toggle ON: All movement halts (as if you stopped manually)</li>
+                <li>Only <code>X</code> is usable; right-click and boost are blocked</li>
+                <li>Receiving the puck auto-fires a <strong>150% power shot</strong> toward cursor</li>
+                <li>3s cooldown on toggle</li>
+              </ul>
+              <li><strong><span class="text-cyan-400">When you do have the puck:</span></strong></li>
+              <ul class="list-disc list-inside pl-6 text-sm">
+                <li>Movement halts, actions blocked (except cancel/fake shot or slide-stop)</li>
+                <li>After 2s, it auto-fires a 150% power shot</li>
+                <li>3s cooldown post-toggle</li>
+              </ul>
+            </ul>
+          </div>
+      
+          <div>
+            <h3 class="text-xl font-semibold text-blue-400 mb-2">🧤 Goalie Powerplay Fixes</h3>
+            <p>We’re refining the goalie-to-skater transformation for more fluid control:</p>
+            <ul class="list-disc list-inside pl-2">
+              <li><strong><span class="text-pink-400">Returning to Net:</span></strong> Reactivating ability returns goalie after 3.5s with teleport + transform</li>
+              <li><strong><span class="text-cyan-400">Activating Powerplay:</span></strong> Triggers after 2.0s with effects, no input restriction during switch</li>
+            </ul>
+          </div>
+      
+          <p class="text-gray-300">
+            These changes are aimed at supporting our core philosophy: <strong>fast-paced, precise, high-agency gameplay</strong>. We're keeping the raw feel of VHL, while dialing in the mechanics that matter most.
+          </p>
+        </div>
+      </section>
+      
   
   </main>
 
